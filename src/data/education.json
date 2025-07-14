@@ -1,0 +1,33 @@
+{
+  "education": [
+    {
+      "name": "Indian Institute of Technology, Madras",
+      "href": "https://www.iitm.ac.in/",
+      "title": "BS in Data Science and Engineering",
+      "logo": "/iit.png",
+      "start": "Sep 2019",
+      "end": "Apr 2023",
+      "description": [
+        "Graduated with a Minor in Mathematics",
+        "President of Digipen Student Management Committee for freshman year",
+        "3-time recipient of the Dean's Honor List"
+      ]
+    },
+    {
+      "name": "Singapore Polytechnic",
+      "href": "https://www.sp.edu.sg",
+      "title": "Diploma in Games Design and Development",
+      "logo": "/sp.png",
+      "start": "Apr 2014",
+      "end": "May 2017"
+    },
+    {
+      "name": "Singapore Polytechnic",
+      "href": "https://www.sp.edu.sg",
+      "title": "Diploma in Games Design and Development",
+      "logo": "/sp.png",
+      "start": "Apr 2014",
+      "end": "May 2017"
+    }
+  ]
+}
