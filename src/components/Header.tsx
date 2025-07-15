@@ -11,13 +11,13 @@ const navLinks = [
     name: "projects",
     href: "/projects",
   },
-  {
-    name: "blog",
-    href: "/blog",
-  },
-  {
+   {
     name: "contact",
     href: "/contact",
+  },
+  {
+    name: "guestbook",
+    href: "/guestbook",
   },
 ];
 
