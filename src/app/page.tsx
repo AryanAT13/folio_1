@@ -98,13 +98,7 @@ export default async function Home() {
 
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">
-          <h2 className="title text-3xl"></h2>
-          <LinkWithIcon
-            href="/blog"
-            position="right"
-            icon={<ArrowRightIcon className="size-5" />}
-            text="view more"
-          />
+          <h2 className="title text-3xl">About.</h2>
         </div>
         <Posts posts={posts} />
       </section>

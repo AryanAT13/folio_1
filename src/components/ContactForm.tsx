@@ -1,6 +1,6 @@
 "use client";
 
-import { sendEmail } from "@/lib/actions";
+import emailjs from "@emailjs/browser";
 import { ContactFormSchema } from "@/lib/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PaperPlaneIcon, ReloadIcon } from "@radix-ui/react-icons";
@@ -21,7 +21,7 @@ import {
 } from "./ui/AlertDialog";
 import { Button } from "./ui/Button";
 import { Input } from "./ui/Input";
-import { Textarea } from "./ui/TextArea";
+import { Textarea } from "./ui/Textarea";
 
 type Inputs = z.infer<typeof ContactFormSchema>;
 
@@ -62,16 +62,24 @@ export default function ContactForm() {
     if (!formData) return;
 
     setShowConfirmDialog(false);
-    const result = await sendEmail(formData);
-
-    if (result.error) {
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: formData.name,
+          email: formData.email, // Used in Reply-To and body
+          message: formData.message,
+          to_email: "aryanamittiwari2004@gmail.com", // Hardcoded recipient
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      toast.success("Message sent successfully!");
+      reset();
+      setFormData(null);
+    } catch (error) {
       toast.error("An error occurred! Please try again later.");
-      return;
     }
-
-    toast.success("Message sent successfully!");
-    reset();
-    setFormData(null);
   };
 
   return (
@@ -121,7 +129,7 @@ export default function ContactForm() {
           <div className="h-32 sm:col-span-2">
             <Textarea
               rows={4}
-              placeholder="Leave feedback about the site, career opportunities or just to say hello etc."
+              placeholder="Slide Into My Inbox—Questions, Gigs, or Memes Welcome."
               autoComplete="Message"
               className="resize-none"
               {...register("message")}
@@ -144,12 +152,6 @@ export default function ContactForm() {
               <PaperPlaneIcon className="ml-2" />
             </div>
           </Button>
-          <p className="mt-4 text-xs text-muted-foreground">
-            By submitting this form, I agree to the{" "}
-            <Link href="/privacy" className="link font-semibold">
-              privacy&nbsp;policy.
-            </Link>
-          </p>
         </div>
       </form>
 
@@ -160,11 +162,11 @@ export default function ContactForm() {
             <AlertDialogDescription asChild>
               <div>
                 <p>
-                  Hey! Remember to use a real email so I can reply you
+                  Hey! Remember to use a real email so I can reply to you
                   personally.
                 </p>
                 <p className="mt-4 font-medium">
-                  I&apos;ll be sending my reply to:{" "}
+                  I'll be sending my reply to:{" "}
                   <span className="text-foreground">{formData?.email}</span>
                 </p>
               </div>

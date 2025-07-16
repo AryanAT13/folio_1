@@ -19,13 +19,35 @@ export default function Chat() {
     setMessages,
     isLoading,
     error,
-  } = useChat();
+  } = useChat({
+    api: "/api/chat",
+    onResponse: (response) => {
+      if (response.ok) {
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+        const read = () => {
+          reader?.read().then(({ done, value }) => {
+            if (done) {
+              return;
+            }
+            const text = decoder.decode(value);
+            setMessages((prev) => [
+              ...prev,
+              { id: Date.now().toString(), role: "assistant", content: text },
+            ]);
+            read();
+          }).catch((err) => console.error("Read error:", err));
+        };
+        read();
+      }
+    },
+  });
 
   const { isVisible } = useChatbot();
 
   return (
     isVisible && (
-      <Accordion type="single" collapsible className="flexs relative z-40">
+      <Accordion type="single" collapsible className="flex relative z-40">
         <AccordionItem
           value="item-1"
           className="fixed bottom-8 right-8 w-80 rounded-md border bg-background"
