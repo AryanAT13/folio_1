@@ -22,14 +22,14 @@ export default function Chat() {
   } = useChat({
     api: "/api/chat",
     onResponse: (response) => {
+      console.log("Response received:", response);
       if (response.ok) {
         const reader = response.body?.getReader();
         const decoder = new TextDecoder();
         const read = () => {
           reader?.read().then(({ done, value }) => {
-            if (done) {
-              return;
-            }
+            console.log("Chunk decoded:", value ? decoder.decode(value) : "No value");
+            if (done) return;
             const text = decoder.decode(value);
             setMessages((prev) => [
               ...prev,
@@ -39,6 +39,8 @@ export default function Chat() {
           }).catch((err) => console.error("Read error:", err));
         };
         read();
+      } else {
+        console.error("Response not OK:", response.status);
       }
     },
   });
