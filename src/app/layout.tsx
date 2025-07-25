@@ -1,10 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Providers from "@/components/Providers";
+import Providers from "@/components/Providers"; // I assume your theme provider is here
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Calistoga, Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
+import { getServerSession } from "next-auth";
+import SessionProvider from "@/components/SessionProvider"; // We will create this
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,13 +25,15 @@ export const metadata: Metadata = {
   description: "My personal site to showcase my developer work and opinions.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await getServerSession(); // Get session on the server
+
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -36,13 +41,17 @@ export default function RootLayout({
           calistoga.variable,
         )}
       >
-        <Providers>
-          <Header />
-          <div className="mx-auto flex max-w-3xl flex-col px-8">
-            <main className="grow">{children}</main>
-          </div>
-          <Footer />
-        </Providers>
+        {/* The SessionProvider needs to wrap your app */}
+        <SessionProvider session={session}>
+          <Providers>
+            <Header />
+            <div className="mx-auto flex max-w-3xl flex-col px-8">
+              <main className="grow">{children}</main>
+            </div>
+            <Footer />
+            <Toaster richColors position="top-center" />
+          </Providers>
+        </SessionProvider>
       </body>
     </html>
   );
