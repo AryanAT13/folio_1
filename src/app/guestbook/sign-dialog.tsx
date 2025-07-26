@@ -25,11 +25,17 @@ type User = {
   image?: string | null;
 };
 
+// Define the character limit
+const MAX_CHARS = 100;
+
 export default function SignDialog({ user }: { user: User }) {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [localSignature, setLocalSignature] = useState<string>("");
   const [isPending, startTransition] = useTransition();
+
+  // Add state to track the message input
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -47,6 +53,7 @@ export default function SignDialog({ user }: { user: User }) {
         await sign(formData);
         router.refresh(); 
         toast.success("Thank you for signing!");
+        setMessage(""); // Clear the message field on success
         setIsOpen(false);
       } catch (err: any) {
         toast.error(err.message);
@@ -77,7 +84,18 @@ export default function SignDialog({ user }: { user: User }) {
             </div>
             <div className="grid w-full gap-1.5">
               <Label htmlFor="message">Leave a message</Label>
-              <Textarea id="message" name="message" required />
+              <Textarea 
+                id="message" 
+                name="message" 
+                required 
+                maxLength={MAX_CHARS} // Enforce the limit
+                value={message} // Control the component with state
+                onChange={(e) => setMessage(e.target.value)} // Update state on change
+              />
+              {/* Add the character counter below the textarea */}
+              <div className="text-right text-xs text-muted-foreground">
+                {message.length} / {MAX_CHARS}
+              </div>
             </div>
             <div className="grid w-full gap-1.5">
               <Label>Draw your signature</Label>
