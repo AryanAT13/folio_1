@@ -43,7 +43,7 @@ async function queryTurso(sql: string, args: Args): Promise<QueryResult> {
     const rows = rawRows.map((row: any[]) => {
       const obj: { [key: string]: any } = {};
       columns.forEach((col: string, index: number) => {
-        // This is the simplified, correct logic for your data format
+        
         obj[col] = row[index];
       });
       return obj;

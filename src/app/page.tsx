@@ -50,23 +50,23 @@ export default async function Home() {
 
           <div className="mt-6 flex items-center gap-1">
             <p className="text-balance text-sm font-semibold sm:text-base">
-              Kendall knows stuff. Probably. Ask her.
+              Ellie knows stuff. Probably. Ask her.
             </p>
             <ArrowDownRight className="hidden size-5 animate-bounce sm:block" />
             <ArrowDown className="block size-5 animate-bounce sm:hidden" />
           </div>
 
           <p className="mt-1 text-xs font-light">
-            For anything else, find my
+            Sign my 
             <Link
-              href="https://x.com/TiwariAryan_"
+              href="http://localhost:3000/guestbook"
               target="_blank"
               className="link font-semibold"
               title="X"
             >
-              &nbsp;twitter&nbsp;
+              &nbsp;guestbook&nbsp;
             </Link>
-            instead.
+            while you're here.
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">

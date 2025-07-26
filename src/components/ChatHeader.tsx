@@ -5,7 +5,7 @@ export default function ChatHeader() {
         <p className="text-xs">Chat with</p>
         <div className="flex items-center gap-2">
           <span className="size-2 animate-pulse rounded-full bg-emerald-500" />
-          <p className="text-sm font-medium">Kendall</p>
+          <p className="text-sm font-medium">Ellie</p>
         </div>
       </div>
     </section>
