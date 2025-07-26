@@ -40,7 +40,7 @@ export default async function GuestbookPage() {
   }
 
   return (
-    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
       {posts.map((post) => (
         <li key={post.id} className="flex">
           <Card className="flex h-full w-full flex-col justify-between space-y-4 p-6">

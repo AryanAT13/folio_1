@@ -129,7 +129,7 @@ export default function ContactForm() {
           <div className="h-32 sm:col-span-2">
             <Textarea
               rows={4}
-              placeholder="Slide Into My Inbox—Questions, Gigs, or Memes Welcome."
+              placeholder="Slide Into My Inbox—Questions, Gigs, or OpenSource Welcome."
               autoComplete="Message"
               className="resize-none"
               {...register("message")}
