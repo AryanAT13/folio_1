@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card"; // We'll use the Card component
 import { ArrowDown, ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedText from "@/components/AnimatedText";
 
 const TED_BIRTH_YEAR = 2005;
 const LIMIT = 2;
@@ -26,7 +27,7 @@ export default function Home() {
         />
         <div className="flex max-w-[320px] flex-col sm:max-w-full">
           <h1 className="title text-balance text-4xl sm:text-5xl">
-            Hi aryan here. 👋
+            hi Aryan here. 👋
           </h1>
 
           <p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
@@ -96,10 +97,10 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-primary">
                 I do.
               </h3>
-              <p className="mt-2 text-muted-foreground">
-                I handle the flow of AI, wrangle data, and code until it clicks… somehow it all works. From scalable web apps to deployed ML pipelines,
-                I build solutions that are impactful and efficient & yes, I do DSA so LeetCode stops judging me.
-              </p>
+             <AnimatedText 
+  className="mt-2 text-muted-foreground"
+  text="I handle the flow of AI, wrangle data, and code until it clicks… somehow it all works. From scalable web apps to deployed ML pipelines, I build solutions that are impactful and efficient & yes, I do DSA so LeetCode stops judging me."
+/>
               {/* --- Text Glow for Standout Quote --- */}
               <p className="text-glow-chase mt-4">
                 No loose ends, if anything's on me it’s getting sorted. I get THINGS DONE.

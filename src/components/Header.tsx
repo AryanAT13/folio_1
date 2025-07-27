@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ChatToggle from "./ChatToggle";
 import ThemeToggle from "./ThemeToggle";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   {
@@ -11,7 +12,7 @@ const navLinks = [
     name: "projects",
     href: "/projects",
   },
-   {
+  {
     name: "contact",
     href: "/contact",
   },
@@ -28,7 +29,8 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <ul className="flex gap-4 sm:gap-8">
             {navLinks.map((nav, id) => (
-              <li key={id} className="link">
+              // This line has been changed to apply the class to all links
+              <li key={id} className="link special-link">
                 <Link href={nav.href}>{nav.name}</Link>
               </li>
             ))}
