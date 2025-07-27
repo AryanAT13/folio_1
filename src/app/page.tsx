@@ -3,7 +3,7 @@ import LinkWithIcon from "@/components/LinkWithIcon";
 import Projects from "@/components/Projects";
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card"; // We'll use the Card component
+import { Card } from "@/components/ui/Card"; 
 import { ArrowDown, ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default function Home() {
             >
               &nbsp;guestbook&nbsp;
             </Link>
-            while you're here.
+            while you&apos;re here.
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
@@ -102,7 +102,7 @@ export default function Home() {
 />
               {/* --- Text Glow for Standout Quote --- */}
               <p className="text-glow-chase mt-4">
-                No loose ends, if anything's on me it’s getting sorted. I get THINGS DONE.
+                No loose ends, if anything&apos;s on me it&apos;s getting sorted. I get THINGS DONE.
               </p>
 
 

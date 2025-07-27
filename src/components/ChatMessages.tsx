@@ -40,7 +40,7 @@ export default function ChatMessages({
           <Bot />
           <p className="font-medium">Send a message to start the chat!</p>
           <p className="text-center text-xs text-muted-foreground">
-            You can ask Ellie anything about me and she'll help you with it.
+            You can ask Ellie anything about me and she&apos;ll help you with it.
           </p>
         </div>
       )}

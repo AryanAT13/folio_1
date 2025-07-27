@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { unsafe_useEffectOnce } from "@/lib/hooks/use-effect-once";
+import { useUnsafeEffectOnce } from "@/lib/hooks/use-effect-once";
 import { getStroke, type StrokeOptions } from "perfect-freehand";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { getSvgPathFromStroke } from "./helper";

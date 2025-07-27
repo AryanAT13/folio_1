@@ -166,7 +166,7 @@ export default function ContactForm() {
                   personally.
                 </p>
                 <p className="mt-4 font-medium">
-                  I'll be sending my reply to:{" "}
+                  I&apos;ll be sending my reply to:{" "}
                   <span className="text-foreground">{formData?.email}</span>
                 </p>
               </div>
