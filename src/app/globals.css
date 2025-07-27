@@ -103,3 +103,127 @@
     @apply ml-1 mt-2 text-sm text-rose-400;
   }
 }
+
+
+/* Rainbow animated text */
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff005c,
+    #ffb100,
+    #00ffa3,
+    #00cfff,
+    #8e00ff,
+    #ff005c
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-slide 8s linear infinite;
+}
+
+@keyframes rainbow-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+/* Golden glow text */
+.glow-gold {
+  color: #f7c06d;
+  font-weight: 600;
+  text-shadow: 0 0 5px #f7c06d, 0 0 10px #f7c06d, 0 0 15px #f7c06d;
+}
+
+/* Text Glow Chase Effect */
+.text-glow-chase {
+  font-size: 1rem; /* text-lg */
+  line-height: 1.4rem;
+  text-align: center;
+  font-style: italic;
+  /* The base text color */
+  color: hsl(var(--muted-foreground)); 
+  
+  /* The magic starts here */
+  background-image: linear-gradient(
+    90deg,
+    hsl(var(--muted-foreground)),
+    hsl(var(--muted-foreground)),
+    #ffffff, /* This is the bright "glow" color */
+    hsl(var(--muted-foreground)),
+    hsl(var(--muted-foreground))
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-chase-animation 4s linear infinite;
+}
+
+@keyframes text-chase-animation {
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* Glitchy Text Effect */
+.glitchy-text {
+  position: relative;
+  color: hsl(var(--destructive)); /* Use the 'destructive' red from your theme */
+  font-weight: 600;
+}
+
+.glitchy-text::before,
+.glitchy-text::after {
+  content: attr(data-text); /* Copies the text from the element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: hsl(var(--background)); /* Match your site's background */
+}
+
+.glitchy-text::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1; /* A magenta shadow */
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitchy-text::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9; /* A cyan shadow */
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); }
+  10% { clip-path: polygon(0 70%, 100% 70%, 100% 75%, 0 75%); }
+  20% { clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%); }
+  30% { clip-path: polygon(0 92%, 100% 92%, 100% 100%, 0 100%); }
+  40% { clip-path: polygon(0 30%, 100% 30%, 100% 35%, 0 35%); }
+  50% { clip-path: polygon(0 60%, 100% 60%, 100% 65%, 0 65%); }
+  60% { clip-path: polygon(0 15%, 100% 15%, 100% 20%, 0 20%); }
+  70% { clip-path: polygon(0 80%, 100% 80%, 100% 85%, 0 85%); }
+  80% { clip-path: polygon(0 55%, 100% 55%, 100% 60%, 0 60%); }
+  90% { clip-path: polygon(0 8%, 100% 8%, 100% 12%, 0 12%); }
+  100% { clip-path: polygon(0 40%, 100% 40%, 100% 45%, 0 45%); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: polygon(0 5%, 100% 5%, 100% 8%, 0 8%); }
+  10% { clip-path: polygon(0 80%, 100% 80%, 100% 83%, 0 83%); }
+  20% { clip-path: polygon(0 35%, 100% 35%, 100% 38%, 0 38%); }
+  30% { clip-path: polygon(0 62%, 100% 62%, 100% 65%, 0 65%); }
+  40% { clip-path: polygon(0 20%, 100% 20%, 100% 23%, 0 23%); }
+  50% { clip-path: polygon(0 90%, 100% 90%, 100% 93%, 0 93%); }
+  60% { clip-path: polygon(0 50%, 100% 50%, 100% 53%, 0 53%); }
+  70% { clip-path: polygon(0 10%, 100% 10%, 100% 13%, 0 13%); }
+  80% { clip-path: polygon(0 75%, 100% 75%, 100% 78%, 0 78%); }
+  90% { clip-path: polygon(0 25%, 100% 25%, 100% 28%, 0 28%); }
+  100% { clip-path: polygon(0 65%, 100% 65%, 100% 68%, 0 68%); }
+}

@@ -1,29 +1,20 @@
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
-import Posts from "@/components/Posts";
 import Projects from "@/components/Projects";
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/Button";
-import { getPosts } from "@/lib/posts";
-import {
-  ArrowDown,
-  ArrowDownRight,
-  ArrowRightIcon,
-  FileDown,
-} from "lucide-react";
+import { Card } from "@/components/ui/Card"; // We'll use the Card component
+import { ArrowDown, ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import path from "path";
 
-const blogDirectory = path.join(process.cwd(), "content");
 const TED_BIRTH_YEAR = 2005;
-const LIMIT = 2; // max show 2
+const LIMIT = 2;
 
-export default async function Home() {
-  const posts = await getPosts(blogDirectory, LIMIT);
-
+export default function Home() {
   return (
     <article className="mt-8 flex flex-col gap-16 pb-16">
+      {/* --- This section remains the same --- */}
       <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
         <Image
           className="rounded-lg"
@@ -57,12 +48,11 @@ export default async function Home() {
           </div>
 
           <p className="mt-1 text-xs font-light">
-            Sign my 
+            Sign my
             <Link
-              href="http://localhost:3000/guestbook"
-              target="_blank"
+              href="/guestbook"
               className="link font-semibold"
-              title="X"
+              title="Guestbook"
             >
               &nbsp;guestbook&nbsp;
             </Link>
@@ -96,11 +86,45 @@ export default async function Home() {
         <Projects limit={LIMIT} />
       </section>
 
-      <section className="flex flex-col gap-8">
-        <div className="flex justify-between">
-          <h2 className="title text-3xl">About.</h2>
-        </div>
-        <Posts posts={posts} />
+      {/* --- This is the new "About Me" section --- */}
+      <section className="flex flex-col gap-4">
+        <h2 className="title text-3xl">About.</h2>
+        <Card className="p-6">
+          <div className="flex flex-col gap-6">
+            {/* First Block */}
+            <div>
+              <h3 className="text-xl font-semibold text-primary">
+                I do.
+              </h3>
+              <p className="mt-2 text-muted-foreground">
+                I handle the flow of AI, wrangle data, and code until it clicks… somehow it all works. From scalable web apps to deployed ML pipelines,
+                I build solutions that are impactful and efficient & yes, I do DSA so LeetCode stops judging me.
+              </p>
+              {/* --- Text Glow for Standout Quote --- */}
+              <p className="text-glow-chase mt-4">
+                No loose ends, if anything's on me it’s getting sorted. I get THINGS DONE.
+              </p>
+
+
+            </div>
+
+            <div className="border-b border-border" />
+
+            {/* Second Block */}
+            <div>
+              <h3 className="text-xl font-semibold text-primary">
+                I like.
+              </h3>
+<p className="mt-2 text-muted-foreground">
+  I unwind by obsessing over{" "}
+  <span className="rainbow-text font-bold">PlayStation®</span>{" "}
+  <span className="glow-gold">exclusives</span>, watching way too many streams,
+  and convincing myself that buying another pair of Jordans counts as “investing”. Speaking of <span className="glitchy-text" data-text="investments">investments</span> I stare at mine like they’re gonna apologize first.
+</p>
+
+            </div>
+          </div>
+        </Card>
       </section>
     </article>
   );
