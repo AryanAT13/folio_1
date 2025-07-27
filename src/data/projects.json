@@ -1,130 +1,99 @@
 {
   "projects": [
     {
-      "name": "TT4D",
-      "description": "Generate winning combinations, view past results, and analyze lottery trends all in one place",
-      "image": "/tt4d.png",
+      "name": "Fintech-PropTech",
+      "description": "Blockchain-based asset trading platform with real-time valuation, dynamic portfolio rebalancing, and geospatial asset tracking.",
+      "image": "/project1.png",
       "tags": [
-        "Python",
-        "FastAPI",
+        "React",
+        "RestAPI",
         "Docker",
-        "Fly.io",
-        "NextJS",
-        "PostgreSQL",
-        "TailwindCSS",
-        "BS4"
+        "Firebase",
+        "TensorFlow",
+        "Mapbox",
+        "Stripe"
       ],
       "links": [
         {
           "name": "Website",
-          "href": "https://huatnumbers.com",
+          "href": "https://under-construction-hazel.vercel.app/",
           "icon": "globe"
         },
         {
           "name": "Source",
-          "href": "https://github.com/tedawf/tt4d",
-          "icon": "github"
-        },
-        {
-          "name": "Source (UI)",
-          "href": "https://github.com/tedawf/tt4d-web",
+          "href": "https://github.com/AryanAT13",
           "icon": "github"
         }
       ]
     },
-    {
-      "name": "Tradingview Telegram Alerts",
-      "description": "Real-time trading alerts with chart snapshots sent to Telegram, designed to keep traders informed and responsive to market changes",
-      "image": "/tv-tele-alerts.png",
+     {
+      "name": "LawLens",
+      "description": "Designed to simplify complex legal matters for everyday users. Whether it's a confusing clause in a contract or a general legal concern, LawLens delivers actionable insights, contextual Reddit wisdom, and intelligent document analysis.",
+      "image": "/pf.png",
       "tags": [
+        "Nodejs",
         "Python",
+        "NLP",
+        "PyMuPDF",
         "FastAPI",
-        "Docker",
-        "Fly.io",
-        "Selenium",
-        "Telegram Bot API"
+        "RAG",
+        "SDK"
       ],
       "links": [
         {
+          "name": "Website",
+          "href": "https://under-construction-hazel.vercel.app/",
+          "icon": "globe"
+        },
+        {
           "name": "Source",
-          "href": "https://github.com/tedawf/tradingview-telegram-alerts",
+          "href": "https://github.com/AryanAT13",
           "icon": "github"
         }
       ]
     },
     {
-      "name": "NFTVue",
-      "description": "Non-Fungible Tokens (NFTs) Gallery Viewer website that allows users to connect their crypto wallets to view and verify their tokens",
-      "href": "https://nftvue.vercel.app",
-      "image": "/nftvue.png",
+      "name": "DevPulse",
+      "description": "It analyzes your GitHub activity and turns it into smart, actionable insights, helping you understand your real coding habits, language preferences, and workflow patterns.",
+      "image": "/Project2.png",
       "tags": [
-        "NextJS",
-        "TailwindCSS",
-        "MetaMask",
-        "WalletConnect",
-        "Web3",
-        "NFTScan",
-        "HashKey DID"
+        "React",
+        "FastAPI",
+        "Nodejs",
+        "Hugging Face",
+        "FAISS",
+        "GitHub REST",
+        "Supabase",
+        "Docker"
+
       ],
       "links": [
         {
           "name": "Website",
-          "href": "https://nftvue.vercel.app",
-          "icon": "globe"
-        }
-      ]
-    },
-    {
-      "name": "Portfolio 2023 (Outdated)",
-      "description": "Simple markdown portfolio made with Astro 🚀",
-      "href": "https://tedawf-dot-com.netlify.app",
-      "image": "/old-portfolio.png",
-      "tags": ["Astro", "TailwindCSS", "Netlify", "SEO"],
-      "links": [
-        {
-          "name": "Website",
-          "href": "https://tedawf-dot-com.netlify.app",
+          "href": "https://under-construction-hazel.vercel.app/",
           "icon": "globe"
         },
         {
           "name": "Source",
-          "href": "https://github.com/tedawf/portfolio-2023",
+          "href": "https://github.com/AryanAT13",
           "icon": "github"
         }
       ]
     },
+   
     {
-      "name": "Rapid Ride Fight (Final Year)",
-      "description": "3D capture-the-flag, multiplayer boat fighting, with smart AI and water graphics",
-      "href": "https://games.digipen.edu/games/rapid-ride-fight",
-      "image": "/rrf.png",
-      "tags": ["C/C++", "OpenGL", "Custom Game Engine", "3D"],
+      "name": "Prompt Tune",
+      "description": "Browser based AI Prompt Enhancer. With smart rewriting and enhancement built right in, users don’t need to master the art of prompting Prompt Tune does it for them.",
+      "image": "/si.png",
+      "tags": ["Nextjs", "TailwindCSS", "Cohere API", "Supabase", "Framer Motion"],
       "links": [
         {
-          "name": "Gameplay",
-          "href": "https://www.youtube.com/watch?v=bge3fiypg5U",
-          "icon": "youtube"
-        },
-        {
-          "name": "Trailer",
-          "href": "https://www.youtube.com/watch?v=PNAO-aI1Daw",
-          "icon": "youtube"
-        }
-      ]
-    },
-    {
-      "name": "Glowing Under (2nd Year)",
-      "description": "2D platformer with a focus on puzzle-solving, no-death exploration and storytelling",
-      "href": "https://games.digipen.edu/games/glowing-under",
-      "image": "/gu.png",
-      "tags": ["C/C++", "OpenGL", "Custom Game Engine", "2D"],
-      "links": [
-        {
-          "name": "Trailer",
-          "href": "https://www.youtube.com/watch?v=u6RYwBZlSfg",
-          "icon": "youtube"
+          "name": "Website",
+          "href": "https://prompt-enhancer-weld.vercel.app/",
+          "icon": "globe"
         }
       ]
     }
+ 
   ]
 }

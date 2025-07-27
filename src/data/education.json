@@ -3,31 +3,39 @@
     {
       "name": "Indian Institute of Technology, Madras",
       "href": "https://www.iitm.ac.in/",
-      "title": "BS in Data Science and Engineering",
+      "title": "BS in Data Science.",
       "logo": "/iit.png",
-      "start": "Sep 2019",
-      "end": "Apr 2023",
+      "start": "Jul 2023",
+      "end": "Present",
       "description": [
-        "Graduated with a Minor in Mathematics",
-        "President of Digipen Student Management Committee for freshman year",
-        "3-time recipient of the Dean's Honor List"
+        "Automated, visualized, and wrangled data with Python libraries.",
+        "Built and tuned machine learning models that learned faster than my coffee cooled.",
+        "Trained in the art of discovering hidden truths in data whether structured or unstructured."
       ]
     },
     {
       "name": "Vellore Institute of Technology, Chennai",
-      "href": "https://www.sp.edu.sg",
-      "title": "Diploma in Games Design and Development",
+      "href": "https://chennai.vit.ac.in/",
+      "title": "BTech in Computer Science Eng. with Specialization in AI & Ml.",
       "logo": "/Vit.png",
-      "start": "Apr 2014",
-      "end": "May 2017"
+      "start": "Jul 2023",
+      "end": "Present",
+      "description": [
+        "Learning to build and tweak neural networks from basic perceptrons to GenAI with transformers and diffusion models.",
+        "Taking steps to connect AI with real-world impact, whether it's through internships, open-source, or small personal prototypes."
+      ]
     },
     {
       "name": "Delhi Public School Sushant Lok, Gurgaon",
-      "href": "https://www.sp.edu.sg",
-      "title": "Diploma in Games Design and Development",
+      "href": "https://dpssl.net/",
+      "title": "High School",
       "logo": "/dps.png",
-      "start": "Apr 2014",
-      "end": "May 2017"
+      "start": "2013",
+      "end": "2021",
+      "description": [
+        "Awarded with Scholar Badges and Blue Blazer for consistent academic excellence.",
+        "Scored around 90% in 10th and 80% in 12th grade CBSE Board Examinations."
+      ]
     }
   ]
 }

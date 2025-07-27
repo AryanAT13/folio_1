@@ -1,56 +1,40 @@
 {
   "career": [
     {
-      "name": "DBS Bank",
-      "href": "https://www.dbs.com.sg",
-      "title": "Graduate Associate (SEED Programme)",
-      "logo": "/dbs.png",
-      "start": "Jul 2023",
+      "name": "Wayspire (Microsoft & Tryst, IIT‑Delhi)",
+      "href": "https://wayspire.in/",
+      "title": "A.I. Intern",
+      "logo": "/way.png",
+      "start": "Feb 2023 ",
+      "end": "JApr 2023",
       "description": [
-        "Developed the Java backend for a bank account servicing process with multiple channel integrations using Activiti workflow",
-        "Built a custom database migration tool using Python and MariaDB and facilitated the migration of 1000+ processes from a vendor platform"
+        "Designed and deployed end‑to‑end ML pipelines on Azure, boosting model accuracy by 12% and reducing latency by 30%.",
+        "Engineered NLP modules achieving 90% intent classification accuracy."
       ]
     },
     {
-      "name": "Singapore Institute of Technology",
-      "href": "https://www.singaporetech.edu.sg",
-      "title": "Software Developer (Contract)",
-      "logo": "/sit.png",
-      "start": "Apr 2023",
-      "end": "Jun 2023",
+      "name": "Unified Mentor",
+      "href": "https://www.unifiedmentor.com/",
+      "title": "Web Dev Intern",
+      "logo": "/uni.png",
+      "start": "June 2024",
+      "end": "July 2024",
       "description": [
-        "Built NFTVue, a NFT gallery website that allows students to connect their crypto wallets to view and verify their school event-issued NFTs",
-        "Worked on DemoConstruct, a full-stack web application (React + Python) that uses Meshroom to reconstruct 3D models from captured images"
-      ],
-      "links": [
-        {
-          "name": "NFTVue",
-          "href": "https://nftvue.vercel.app",
-          "icon": "globe"
-        }
+        "Built responsive React.js front-ends, improving page load times by 25%.",
+        "Integrated and optimized RESTful APIs and database queries to support high‑traffic scenarios.",
+        "Instituted unit/integration testing, raising code coverage to 85%."
       ]
     },
     {
-      "name": "DBS Bank",
-      "href": "https://www.dbs.com.sg",
-      "title": "Software Developer (Intern)",
-      "logo": "/dbs.png",
-      "start": "May 2022",
-      "end": "Dec 2022",
+      "name": "Finlatics",
+      "href": "https://www.finlatics.com/",
+      "title": "Business Analyst (Project)",
+      "logo": "/fin.jpg",
+      "start": "Dec 2023",
+      "end": "Jan 2024",
       "description": [
-        "Worked on the backend for the digital exchange and asset custody application using Spring Boot and Java",
-        "Built an admin dashboard web application for a DBS Metaverse event using Spring Security and Angular"
-      ]
-    },
-    {
-      "name": "Activate Interactive Pte Ltd",
-      "href": "https://www.activate.sg",
-      "title": "Software Developer (Intern)",
-      "logo": "/activate.png",
-      "start": "May 2019",
-      "end": "Aug 2019",
-      "description": [
-        "Developed RP Connect, the iOS and Android mobile app for Republic Polytechnic using React Native"
+        "Led market analysis and feasibility studies, crafting a turnaround strategy projecting 20% revenue growth.",
+        "Developed interactive Power BI dashboards for KPI visualization, driving a 50K investment decision."
       ]
     }
   ]

@@ -36,8 +36,7 @@ export default function Home() {
           </p>
 
           <p className="mt-4 max-w-sm text-balance text-sm sm:text-base">
-            Backend by trade, full-stack by passion. I build and self-host the
-            lot.
+            AI by core, full-stack by craft.  I build intelligent systems from model to UI.
           </p>
 
           <div className="mt-6 flex items-center gap-1">
