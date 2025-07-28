@@ -60,7 +60,7 @@ export default function Home() {
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
-            <Link href="/Final.pdf" target="_blank">
+            <Link href="/ReResume.pdf" target="_blank">
               <Button variant="outline">
                 <span className="font-semibold">Resume</span>
                 <FileDown className="ml-2 size-5" />
