@@ -93,6 +93,19 @@
           "icon": "globe"
         }
       ]
+    },
+        {
+      "name": "Portfolio",
+      "description": "My personal corner of the internet, built from scratch to showcase my work. Featuring a custom interactive guestbook with GitHub sign-in, a drawable signature pad, and an AI chatbot ready to answer questions. It is a full-stack application deployed globally on the edge.",
+      "image": "/port.jpg",
+      "tags": ["Nextjs", "TypeScript", "Turso(SQLite)", "NextAuthjs", "EmailJS", "Cohere"],
+      "links": [
+        {
+          "name": "You are at the spot.",
+          "href": "https://folio-1-ten.vercel.app/",
+          "icon": "globe"
+        }
+      ]
     }
  
   ]

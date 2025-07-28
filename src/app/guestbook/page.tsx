@@ -54,6 +54,7 @@ export default async function GuestbookPage() {
                   {new Date(Number(post.created_at) * 1000).toLocaleString(
                     "en-US",
                     {
+                      timeZone: "Asia/Kolkata",
                       month: "short",
                       day: "numeric",
                       year: "numeric",
