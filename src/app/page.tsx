@@ -8,6 +8,7 @@ import { ArrowDown, ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-reac
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
+import WavingHand from "@/components/WavingHand";
 
 const aryan_BIRTH_YEAR = 2005;
 const LIMIT = 2;
@@ -27,7 +28,7 @@ export default function Home() {
         />
         <div className="flex max-w-[320px] flex-col sm:max-w-full">
           <h1 className="title text-balance text-4xl sm:text-5xl">
-            hi Aryan here. 👋
+            hi Aryan here. <WavingHand />
           </h1>
 
           <p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
