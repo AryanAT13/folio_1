@@ -3,13 +3,13 @@ import LinkWithIcon from "@/components/LinkWithIcon";
 import Projects from "@/components/Projects";
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card"; 
+import { Card } from "@/components/ui/Card";
 import { ArrowDown, ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
 
-const TED_BIRTH_YEAR = 2005;
+const aryan_BIRTH_YEAR = 2005;
 const LIMIT = 2;
 
 export default function Home() {
@@ -31,13 +31,18 @@ export default function Home() {
           </h1>
 
           <p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
-            {new Date().getFullYear() - TED_BIRTH_YEAR}
+            {new Date().getFullYear() - aryan_BIRTH_YEAR}
             yo software engineer from 📍Gurgaon, India 🇮🇳
           </p>
-
-          <p className="mt-4 max-w-sm text-balance text-sm sm:text-base">
-            AI by core, full-stack by craft.  I build intelligent systems from model to UI.
-          </p>
+          <div className="mt-4 max-w-sm text-balance">
+            <p className="text-base font-semibold sm:text-lg">
+              AI by Core, Builder by Craft.
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              I bring intelligent systems to life, transforming raw data into smart
+              applications with scalable backend, impactful ML pipelines & doing <strong>Opensource.</strong>
+            </p>
+          </div>
 
           <div className="mt-6 flex items-center gap-1">
             <p className="text-balance text-sm font-semibold sm:text-base">
@@ -96,10 +101,10 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-primary">
                 I do.
               </h3>
-             <AnimatedText 
-  className="mt-2 text-muted-foreground"
-  text="I handle the flow of AI, wrangle data, and code until it clicks… somehow it all works. From scalable web apps to deployed ML pipelines, I build solutions that are impactful and efficient & yes, I do DSA so LeetCode stops judging me."
-/>
+              <AnimatedText
+                className="mt-2 text-muted-foreground"
+                text="I handle the flow of AI, wrangle data, and code until it clicks… somehow it all works. From scalable web apps to deployed ML pipelines, I build solutions that are impactful and efficient & yes, I do DSA so LeetCode stops judging me."
+              />
               {/* --- Text Glow for Standout Quote --- */}
               <p className="text-glow-chase mt-4">
                 No loose ends, if anything&apos;s on me it&apos;s getting sorted. I get THINGS DONE.
@@ -115,12 +120,12 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-primary">
                 I like.
               </h3>
-<p className="mt-2 text-muted-foreground">
-  I unwind by obsessing over{" "}
-  <span className="rainbow-text font-bold">PlayStation®</span>{" "}
-  <span className="glow-gold">exclusives</span>, watching way too many streams,
-  and convincing myself that buying another pair of Jordans counts as “investing”. Speaking of <span className="glitchy-text" data-text="investments">investments</span> I stare at mine like they’re gonna apologize first.
-</p>
+              <p className="mt-2 text-muted-foreground">
+                I unwind by obsessing over{" "}
+                <span className="rainbow-text font-bold">PlayStation®</span>{" "}
+                <span className="glow-gold">exclusives</span>, watching way too many streams,
+                and convincing myself that buying another pair of Jordans counts as “investing”. Speaking of <span className="glitchy-text" data-text="investments">investments</span> I stare at mine like they’re gonna apologize first.
+              </p>
 
             </div>
           </div>

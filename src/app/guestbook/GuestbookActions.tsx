@@ -17,7 +17,7 @@ export default function GuestbookActions({ session, hasPosted }: GuestbookAction
     <div className="space-y-4">
       <div className="flex w-full items-center justify-between">
  <h1 className="title text-balance text-4xl sm:text-4xl">
-           Sign my guestbook.
+           sign my guestbook.
           </h1>
         {session && (
           <Button variant="ghost" type="button" onClick={() => signOut()}>
