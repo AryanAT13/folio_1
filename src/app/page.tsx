@@ -40,8 +40,7 @@ export default function Home() {
               AI by Core, Builder by Craft.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              I bring intelligent systems to life, transforming raw data into smart
-              applications with scalable backend, impactful ML pipelines & doing <strong>Opensource.</strong>
+              I build reliable systems and clever tools from backend APIs to developer workflows, always with a focus on performance & impact, also I do <strong>Opensource.</strong>
             </p>
           </div>
 
