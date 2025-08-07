@@ -94,7 +94,7 @@ export default function Home() {
 
       {/* --- This is the new "About Me" section --- */}
       <section className="flex flex-col gap-4">
-        <h2 className="title text-3xl">About.</h2>
+        <h2 className="title text-3xl">about.</h2>
         <Card className="p-6">
           <div className="flex flex-col gap-6">
             {/* First Block */}
