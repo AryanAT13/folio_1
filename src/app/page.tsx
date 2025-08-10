@@ -37,7 +37,7 @@ export default function Home() {
           </p>
           <div className="mt-4 max-w-sm text-balance">
             <p className="text-base font-semibold sm:text-lg">
-              AI by Core, Builder by Craft.
+              AI by Core. Dev in flow.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               I build reliable systems and software infrastructure, from backend APIs to developer workflows, always with a focus on performance & impact also I do <strong>Opensource.</strong>
