@@ -33,7 +33,16 @@ export default function Home() {
 
           <p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
             {new Date().getFullYear() - aryan_BIRTH_YEAR}
-            yo software engineer from Gurgaon, India
+            {' '}yo software engineer from{' '}
+            <a
+              href="https://maps.app.goo.gl/sUitXcBh7XzDcFaq5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Gurgaon
+            </a>
+            , India.
           </p>
           <div className="mt-4 max-w-sm text-balance">
             <p className="text-base font-semibold sm:text-lg">
