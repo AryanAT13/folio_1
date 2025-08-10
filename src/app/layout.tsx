@@ -8,6 +8,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import { getServerSession } from "next-auth";
 import SessionProvider from "@/components/SessionProvider"; // We will create this
+import ParticleBackground from "@/components/ParticleBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,7 +42,7 @@ export default async function RootLayout({
           calistoga.variable,
         )}
       >
-        {/* The SessionProvider needs to wrap your app */}
+        <ParticleBackground /> {/* The SessionProvider needs to wrap your app */}
         <SessionProvider session={session}>
           <Providers>
             <Header />
