@@ -38,9 +38,9 @@ export default function ChatMessages({
       {!error && messages.length === 0 && (
         <div className="mt-16 flex h-full flex-col items-center justify-center gap-2">
           <Bot />
-          <p className="font-medium">Send a message to start the chat!</p>
+          <p className="font-medium">Ask Ellie anything about me, she&apos;ll help!</p>
           <p className="text-center text-xs text-muted-foreground">
-            You can ask Ellie anything about me and she&apos;ll help you with it.
+          Ellie might lose it after a few ques, yeah...Free API.
           </p>
         </div>
       )}
