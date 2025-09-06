@@ -89,7 +89,7 @@ export default function Home() {
 
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">
-          <h2 className="title text-2xl sm:text-3xl">featured projects</h2>
+          <h2 className="title text-2xl sm:text-3xl">featured projects.</h2>
           <LinkWithIcon
             href="/projects"
             position="right"
