@@ -267,35 +267,3 @@
 .special-link:hover::after {
   transform: scaleX(1);
 }
-
-/* Animated Grid Background Effect */
-.trace-line {
-  stroke: hsl(var(--primary) / 0.3);
-  stroke-width: 2;
-  /* Get the length of the line for the animation */
-  stroke-dasharray: 1; 
-  stroke-dashoffset: 1;
-  /* Animation: draw the line, hold, then fade out */
-  animation: draw-and-fade linear infinite;
-  /* Use pathLength for simpler animation */
-  path-length: 1; 
-}
-
-@keyframes draw-and-fade {
-  from {
-    stroke-dashoffset: 1;
-    opacity: 1;
-  }
-  25% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  80% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-    opacity: 0;
-  }
-}

@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
 import WavingHand from "@/components/WavingHand";
+import { cachedDataVersionTag } from "v8";
 
 const aryan_BIRTH_YEAR = 2005;
 const LIMIT = 2;
@@ -143,3 +144,5 @@ export default function Home() {
     </article>
   );
 }
+
+
