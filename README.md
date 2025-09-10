@@ -1,3 +1,58 @@
+# Interactive Developer Portfolio
+
+This is my personal corner of the internet, built from scratch to showcase my work and projects. This portfolio is a project in itself, featuring a custom, interactive guestbook, an AI chatbot, and unique animated backgrounds.
+
+**Live Demo:** [**https://folio-1-ten.vercel.app/**](https://folio-1-ten.vercel.app/)
+
+## Key Features
+
+- **Interactive Guestbook:** Users can sign in with their GitHub account to leave a message and a drawable signature. The guestbook updates in real-time and prevents duplicate entries.
+- **AI Chatbot:** An integrated chatbot powered by the Cohere API to answer questions.
+- **Dynamic UI:** Features several custom-built, animated backgrounds and subtle text animations for a modern and unique feel.
+- **Fully Responsive:** Designed with Tailwind CSS to be fully functional and look great on all devices, from mobile phones to desktops.
+- **Dark Mode:** Includes a theme toggle for a comfortable viewing experience.
+
+## Tech Stack
+
+This project was a deep dive into modern full-stack development, integrating a variety of powerful tools and services.
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Database:** Turso (libSQL)
+- **Authentication:** NextAuth.js (GitHub Provider)
+- **Animations:** HTML Canvas, Lottie, CSS Animations
+- **AI:** LangChain, Cohere
+- **Deployment:** Vercel
+
+## Getting Started
+
+To run this project on your local machine, you'll need to set up the required environment variables.
+
+### Environment Setup
+
+Create a file named `.env` in the root of the project and add the following variables.
+
+```env
+# Turso Database Credentials
+TURSO_DATABASE_URL=
+TURSO_AUTH_TOKEN=
+
+# GitHub OAuth App Credentials
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+# NextAuth.js Variables
+# Generate a secret with: openssl rand -base64 32
+NEXTAUTH_SECRET=
+NEXTAUTH_URL="http://localhost:3000"
+
+# Cohere API Key (for the chatbot)
+COHERE_API_KEY=
+
+# EmailJS Credentials (for the contact form)
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
