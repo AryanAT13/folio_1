@@ -83,9 +83,9 @@
    
     {
       "name": "Prompt Tune",
-      "description": "Browser based AI Prompt Enhancer. With smart rewriting and enhancement built right in, users don’t need to master the art of prompting Prompt Tune does it for them.",
+      "description": "Intelligent web tool designed to bridge the gap between human ideas and AI understanding. It leverages a powerful AI engine to transform simple or vague user prompts into well-structured, effective queries for better results from any LLM. ",
       "image": "/si.png",
-      "tags": ["Nextjs", "TailwindCSS", "Cohere API", "Supabase", "Framer Motion"],
+      "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Cohere AI", "Framer Motion"],
       "links": [
         {
           "name": "Website",
