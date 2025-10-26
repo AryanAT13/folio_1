@@ -8,7 +8,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import { getServerSession } from "next-auth";
 import SessionProvider from "@/components/SessionProvider"; // We will create this
-import ParticleBackground from "@/components/ParticleBackground";
+import VideoBackground from "@/components/VideoBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,12 +37,12 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen font-sans antialiased",
           inter.variable,
           calistoga.variable,
         )}
       >
-        <ParticleBackground /> {/* The SessionProvider needs to wrap your app */}
+        <VideoBackground/> {/* The SessionProvider needs to wrap your app */}
         <SessionProvider session={session}>
           <Providers>
             <Header />
