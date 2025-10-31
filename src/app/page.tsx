@@ -50,7 +50,7 @@ export default function Home() {
               AI by Core. Dev in flow.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              I build reliable systems and software infrastructure, from backend APIs to developer workflows, always with a focus on performance & impact also I do <strong>Opensource.</strong>
+              I build reliable systems and software infrastructure, from backend APIs to developer workflows, always with a focus on performance & impact along with <strong>Opensource.</strong>
             </p>
           </div>
 
