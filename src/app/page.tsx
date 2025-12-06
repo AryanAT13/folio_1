@@ -11,7 +11,20 @@ import AnimatedText from "@/components/AnimatedText";
 import WavingHand from "@/components/WavingHand";
 import { cachedDataVersionTag } from "v8";
 
-const aryan_BIRTH_YEAR = 2005;
+const birthDate = new Date(2004, 10, 13); // Months 0 - jan.... and so on
+function getAccurateAge(date: Date) {
+  const today = new Date();
+  
+  let age = today.getFullYear() - date.getFullYear();
+  const monthDiff = today.getMonth() - date.getMonth();
+  const dayDiff = today.getDate() - date.getDate();
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age--;
+  }
+
+  return age;
+}
 const LIMIT = 2;
 
 export default function Home() {
@@ -33,7 +46,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
-            {new Date().getFullYear() - aryan_BIRTH_YEAR}
+            {getAccurateAge(birthDate)}
             {' '}yo software engineer from{' '}
             <a
               href="https://maps.app.goo.gl/sUitXcBh7XzDcFaq5"
