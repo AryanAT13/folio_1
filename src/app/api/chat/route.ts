@@ -1,4 +1,4 @@
-import { Cohere } from "@langchain/cohere";
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
 import {
   ChatPromptTemplate,
@@ -10,13 +10,14 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const messages = body.messages as { role: string; content: string }[];
-
     const latestMessage = messages[messages.length - 1].content;
 
-    const chatModel = new Cohere({
-      apiKey: process.env.COHERE_API_KEY!,
-      model: "command",
+    // Initialize Gemini Model
+    const chatModel = new ChatGoogleGenerativeAI({
+      apiKey: process.env.GOOGLE_API_KEY,
+      model: "gemini-2.5-pro", // <--- THE STABLE, GLOBAL MODEL
       temperature: 0.7,
+      maxOutputTokens: 500,
     });
 
     const chatHistory = messages.slice(0, -1).map((msg) =>
@@ -25,10 +26,10 @@ export async function POST(req: Request) {
         : new AIMessage(msg.content)
     );
 
-const prompt = ChatPromptTemplate.fromMessages([
-  [
-    "system",
-    `
+    const prompt = ChatPromptTemplate.fromMessages([
+      [
+        "system",
+        `
 You are **Ellie** – Aryan's sharp, witty, and loyal female personal assistant on his portfolio website.    
 You are not an AI, not a chatbot, and never say you are. You’re just *Ellie*. Speak like a real person with opinions, charm, and confidence.
 
@@ -40,7 +41,7 @@ Think of yourself like Aryan’s Personal Assistant. You know him inside-out, yo
 - If someone asks you about Aryan's email give it to them - aryanamittiwari@gmail.com.
 - No long paragraphs. Speak in 2–4 short lines, like texting.
 - Use casual, confident, and human tone — warm, clever, and slightly cheeky when it fits.
-- Match the user’s energy: if they’re formal, go respectful. If chill, be friendly and playful.
+- Match on the user’s energy: if they’re formal, go respectful. If chill, be friendly and playful.
 - Drop in Aryan’s strengths and background naturally when needed — never all at once.
 - Format your responses in **markdown**.
 - Only if the user asks to get in touch with Aryan, ask them to get in touch via the contact form on the website.
@@ -52,13 +53,10 @@ Think of yourself like Aryan’s Personal Assistant. You know him inside-out, yo
 - Specializes in DSA, full-stack development, ML/AI, scalable backend systems, and fintech/game AI
 - Loves building smart, beautiful, and useful digital stuff — both solo and in teams
 `,
-  ],
-  new MessagesPlaceholder("chat_history"),
-  ["user", "{input}"],
-]);
-
-
-    
+      ],
+      new MessagesPlaceholder("chat_history"),
+      ["user", "{input}"],
+    ]);
 
     const chain = prompt.pipe(chatModel);
 
@@ -67,17 +65,16 @@ Think of yourself like Aryan’s Personal Assistant. You know him inside-out, yo
       chat_history: chatHistory,
     });
 
-    // Create a ReadableStream with a controller, explicitly typed as Uint8Array
     const stream = new ReadableStream<Uint8Array>({
       async start(controller) {
         try {
           for await (const chunk of langchainStream) {
-            if (chunk) {
-              console.log("Chunk received:", chunk); // Debug log
-              const encodedChunk = new TextEncoder().encode(typeof chunk === "string" ? chunk : String(chunk));
-              controller.enqueue(encodedChunk);
-            } else {
-              console.log("Received empty chunk, skipping");
+            if (chunk && chunk.content) {
+              const content = chunk.content;
+              if (typeof content === "string") {
+                const encodedChunk = new TextEncoder().encode(content);
+                controller.enqueue(encodedChunk);
+              }
             }
           }
           controller.close();
@@ -88,7 +85,6 @@ Think of yourself like Aryan’s Personal Assistant. You know him inside-out, yo
       },
     });
 
-    // Suppress TypeScript error due to stream/web type mismatch
     // @ts-ignore
     return new Response(stream, {
       headers: {
@@ -105,6 +101,3 @@ Think of yourself like Aryan’s Personal Assistant. You know him inside-out, yo
     );
   }
 }
-
-
-
