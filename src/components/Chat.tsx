@@ -21,27 +21,49 @@ export default function Chat() {
     error,
   } = useChat({
     api: "/api/chat",
+    // ✅ THE FIX: Manual Reader to handle Raw Text
     onResponse: (response) => {
-      console.log("Response received:", response);
       if (response.ok) {
         const reader = response.body?.getReader();
         const decoder = new TextDecoder();
+
+        // 1. Create a placeholder message for Ellie's response
+        setMessages((prev) => [
+          ...prev,
+          { id: Date.now().toString(), role: "assistant", content: "" },
+        ]);
+
         const read = () => {
           reader?.read().then(({ done, value }) => {
-            console.log("Chunk decoded:", value ? decoder.decode(value) : "No value");
             if (done) return;
-            const text = decoder.decode(value);
-            setMessages((prev) => [
-              ...prev,
-              { id: Date.now().toString(), role: "assistant", content: text },
-            ]);
+
+            // Decode the raw chunk
+            const chunk = decoder.decode(value, { stream: true });
+
+            // 2. Append the new text to the LAST message (Ellie's bubble)
+            setMessages((prev) => {
+              const lastMsg = prev[prev.length - 1];
+              // Ensure we are modifying the assistant's message
+              if (lastMsg && lastMsg.role === "assistant") {
+                return [
+                  ...prev.slice(0, -1), // Keep all previous messages
+                  { ...lastMsg, content: lastMsg.content + chunk }, // Update the last one
+                ];
+              }
+              return prev;
+            });
+
+            // Keep reading the next chunk
             read();
-          }).catch((err) => console.error("Read error:", err));
+          }).catch((err) => console.error("Stream read error:", err));
         };
+        
+        // Start the loop
         read();
-      } else {
-        console.error("Response not OK:", response.status);
       }
+    },
+    onError: (e) => {
+      console.error("Chat error:", e);
     },
   });
 
