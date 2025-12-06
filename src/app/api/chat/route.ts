@@ -3,7 +3,7 @@ import { ReadableStream } from "stream/web";
 
 // Initialize the Google Client
 // ✅ Using your working key
-const genAI = new GoogleGenerativeAI("AIzaSyCLSd7EVa3HFSH-UuPE0bgSb05QJutBn7g");
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY as string);
 
 export async function POST(req: Request) {
   try {
