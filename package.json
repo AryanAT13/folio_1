@@ -36,6 +36,7 @@
     "clsx": "^2.1.1",
     "cohere-ai": "^7.17.1",
     "dotenv": "^16.6.1",
+    "framer-motion": "^12.23.26",
     "gray-matter": "^4.0.3",
     "langchain": "^0.3.2",
     "lottie-react": "^2.4.1",
