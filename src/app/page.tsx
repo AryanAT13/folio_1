@@ -29,11 +29,10 @@ const LIMIT = 2;
 
 export default function Home() {
   return (
-    // ✅ FIX APPLIED: Changed 'mt-8' to 'pt-32 md:pt-40'
-    // This pushes the content down so it starts BELOW your new glass header.
+    // We removed padding here because layout.tsx handles it now
     <article className="flex flex-col gap-16 pb-16">
       
-      {/* --- This section remains the same --- */}
+      {/* --- Section 1: Intro --- */}
       <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
         <Image
           className="rounded-lg"
@@ -87,7 +86,8 @@ export default function Home() {
             >
                guestbook 
             </Link>
-            while you're here.
+            {/* ✅ FIXED: Replaced ' with &apos; */}
+            while you&apos;re here.
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
@@ -117,7 +117,7 @@ export default function Home() {
         <Projects limit={LIMIT} />
       </section>
 
-      {/* --- This is the new "About Me" section --- */}
+      {/* --- Section 3: About --- */}
       <section className="flex flex-col gap-4">
         <h2 className="title text-3xl">about.</h2>
         <Card className="p-6">
@@ -133,7 +133,8 @@ export default function Home() {
               />
               {/* --- Text Glow for Standout Quote --- */}
               <p className="text-glow-chase mt-4">
-                No loose ends, if anything's on me it's getting sorted. I get THINGS DONE.
+                 {/* ✅ FIXED: Replaced ' with &apos; in two places */}
+                No loose ends, if anything&apos;s on me it&apos;s getting sorted. I get THINGS DONE.
               </p>
             </div>
 
