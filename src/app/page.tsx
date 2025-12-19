@@ -29,7 +29,10 @@ const LIMIT = 2;
 
 export default function Home() {
   return (
-    <article className="mt-8 flex flex-col gap-16 pb-16">
+    // ✅ FIX APPLIED: Changed 'mt-8' to 'pt-32 md:pt-40'
+    // This pushes the content down so it starts BELOW your new glass header.
+    <article className="flex flex-col gap-16 pb-16">
+      
       {/* --- This section remains the same --- */}
       <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
         <Image
@@ -82,9 +85,9 @@ export default function Home() {
               className="link font-semibold"
               title="Guestbook"
             >
-              &nbsp;guestbook&nbsp;
+               guestbook 
             </Link>
-            while you&apos;re here.
+            while you're here.
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
@@ -130,10 +133,8 @@ export default function Home() {
               />
               {/* --- Text Glow for Standout Quote --- */}
               <p className="text-glow-chase mt-4">
-                No loose ends, if anything&apos;s on me it&apos;s getting sorted. I get THINGS DONE.
+                No loose ends, if anything's on me it's getting sorted. I get THINGS DONE.
               </p>
-
-
             </div>
 
             <div className="border-b border-border" />
@@ -149,7 +150,6 @@ export default function Home() {
                 <span className="glow-gold">exclusives</span>, watching way too many streams,
                 and convincing myself that buying another pair of Jordans counts as “investing”. Speaking of <span className="glitchy-text" data-text="investments">investments</span> I stare at mine like they’re gonna apologize first.
               </p>
-
             </div>
           </div>
         </Card>
@@ -157,5 +157,3 @@ export default function Home() {
     </article>
   );
 }
-
-

@@ -15,6 +15,7 @@ const inter = Inter({
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
 });
+
 const calistoga = Calistoga({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -37,12 +38,12 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen font-sans antialiased",
+          "min-h-screen pt-28 font-sans antialiased", // 👈 pt-28 added here
           inter.variable,
           calistoga.variable,
         )}
       >
-        <VideoBackground/> {/* The SessionProvider needs to wrap your app */}
+        <VideoBackground />
         <SessionProvider session={session}>
           <Providers>
             <Header />

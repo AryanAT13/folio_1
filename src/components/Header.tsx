@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-6">
-      {/* 1. The Centered Glassmorphic Pill */}
+      {/* 1. Centered Glassmorphic Nav Pill */}
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -37,7 +37,6 @@ export default function Header() {
                 isActive ? "text-white" : "text-zinc-400 hover:text-white"
               )}
             >
-              {/* The Sliding "Active" Background */}
               {isActive && (
                 <motion.div
                   layoutId="navbar-active"
@@ -51,9 +50,11 @@ export default function Header() {
         })}
       </motion.nav>
 
-      {/* 2. The Chat Toggle (Positioned absolutely to the right) */}
+      {/* 2. Glassy Chat Toggle (Now Matching the Nav) */}
       <div className="absolute right-6 top-6 sm:right-12">
-        <ChatToggle />
+        <div className="rounded-full border border-white/10 bg-black/20 p-1 backdrop-blur-md transition-all hover:bg-white/10">
+            <ChatToggle />
+        </div>
       </div>
     </header>
   );
