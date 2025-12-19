@@ -18,7 +18,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-6">
-      {/* 1. Centered Glassmorphic Nav Pill */}
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -33,7 +32,8 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "relative px-4 py-2 text-sm font-medium transition-colors duration-300",
+                // Adjusted text size for mobile (text-xs) vs desktop (text-sm)
+                "relative px-3 py-1.5 text-xs font-medium transition-colors duration-300 sm:px-4 sm:py-2 sm:text-sm",
                 isActive ? "text-white" : "text-zinc-400 hover:text-white"
               )}
             >
@@ -50,10 +50,9 @@ export default function Header() {
         })}
       </motion.nav>
 
-      {/* 2. Glassy Chat Toggle (Now Matching the Nav) */}
-      <div className="absolute right-6 top-6 sm:right-12">
+      <div className="absolute right-6 top-6 hidden md:block">
         <div className="rounded-full border border-white/10 bg-black/20 p-1 backdrop-blur-md transition-all hover:bg-white/10">
-            <ChatToggle />
+          <ChatToggle />
         </div>
       </div>
     </header>
