@@ -131,11 +131,6 @@ export default function Home() {
                 className="mt-2 text-muted-foreground"
                 text="I handle the flow of AI, wrangle data, and code until it clicks… somehow it all works. From scalable web apps to deployed ML pipelines, I build solutions that are impactful and efficient & yes, I do DSA so LeetCode stops judging me."
               />
-              {/* --- Text Glow for Standout Quote --- */}
-              <p className="text-glow-chase mt-4">
-                 {/* ✅ FIXED: Replaced ' with &apos; in two places */}
-                No loose ends, if anything&apos;s on me it&apos;s getting sorted. I get THINGS DONE.
-              </p>
             </div>
 
             <div className="border-b border-border" />
