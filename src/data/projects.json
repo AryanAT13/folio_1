@@ -53,18 +53,18 @@
       ]
     },
     {
-      "name": "DevPulse",
-      "description": "It analyzes your GitHub activity and turns it into smart, actionable insights, helping you understand your real coding habits, language preferences, and workflow patterns.",
+      "name": "MediVault",
+      "description": "A patient sovereign medical ledger that secures your biological history on an immutable blockchain, granting you absolute ownership of your health data.It eliminates the fragmentation of traditional healthcare systems by unifying medical records into a single, decentralized vault.",
       "image": "/Project2.png",
       "tags": [
-        "React",
-        "FastAPI",
-        "Nodejs",
-        "Hugging Face",
-        "FAISS",
-        "GitHub REST",
-        "Supabase",
-        "Docker"
+        "Ethereum (Sepolia)",
+        "IPFS",
+        "AES-256",
+        "Node.js",
+        "Ethers.js",
+        "Solidity",
+        "Mongo",
+        "Hardhat"
 
       ],
       "links": [
