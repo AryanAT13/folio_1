@@ -70,12 +70,12 @@
       "links": [
         {
           "name": "Website",
-          "href": "https://under-construction-hazel.vercel.app/",
+          "href": "https://medivault-two.vercel.app/",
           "icon": "globe"
         },
         {
           "name": "Source",
-          "href": "https://github.com/AryanAT13",
+          "href": "https://github.com/AryanAT13/MediVault",
           "icon": "github"
         }
       ]
