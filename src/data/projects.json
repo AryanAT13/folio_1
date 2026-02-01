@@ -80,6 +80,33 @@
         }
       ]
     },
+
+    {
+      "name": "Sentient",
+      "description": "An autonomous AI 'Chief of Staff' that actively manages your digital life. Sentient connects your Inbox and Calendar with a long-term memory engine to autonomously schedule meetings, resolve conflicts, and draft emails based on your historical preferences. \n\n Note: This is a production-grade prototype. Login is restricted to test accounts only. Made for an Internship project",
+      "image": "/senti.png",
+      "tags": [
+        "Agentic AI",
+        "Next.js",
+        "FastAPI",
+        "LangGraph",
+        "Docker",
+        "PostgreSQL",
+        "OAuth 2.0"
+      ],
+      "links": [
+        {
+          "name": "Website",
+          "href": "https://personal-ai-frontend-l6wt.onrender.com/",
+          "icon": "globe"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/AryanAT13/personalAI",
+          "icon": "github"
+        }
+      ]
+    },
    
     {
       "name": "Prompt Tune",
