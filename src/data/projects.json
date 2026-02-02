@@ -83,7 +83,7 @@
 
     {
       "name": "Sentient",
-      "description": "An autonomous AI 'Chief of Staff' that actively manages your digital life. Sentient connects your Inbox and Calendar with a long-term memory engine to autonomously schedule meetings, resolve conflicts, and draft emails based on your historical preferences. \n\n Note: This is a production-grade prototype. Login is restricted to test accounts only. Made for an Internship hiring challenge",
+      "description": "An autonomous AI 'Chief of Staff' that actively manages your digital life. Sentient connects your Inbox and Calendar with a long-term memory engine to autonomously schedule meetings, resolve conflicts, and draft emails based on your historical preferences. \n\n Note: This is a production-grade prototype. Login is restricted to test accounts only. Made for an Internship hiring challenge.",
       "image": "/senti.png",
       "tags": [
         "Agentic AI",
