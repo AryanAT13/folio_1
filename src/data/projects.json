@@ -118,6 +118,11 @@
           "name": "Website",
           "href": "https://prompt-enhancer-weld.vercel.app/",
           "icon": "globe"
+        },
+                {
+          "name": "Source",
+          "href": "https://github.com/AryanAT13/prompt-enhancer",
+          "icon": "github"
         }
       ]
     },
