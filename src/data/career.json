@@ -8,8 +8,9 @@
       "start": "Feb 2024 ",
       "end": "Apr 2024",
       "description": [
-        "Designed and deployed end‑to‑end ML pipelines on Azure, boosting model accuracy by 12% and reducing latency by 30%.",
-        "Engineered NLP modules achieving 90% intent classification accuracy."
+        "Tested  scalable  NLP  modules  for  intent  classification",
+        "Achieved accuracy by systematically analyzing model performance and refining algorithms",
+        "Utilized data-driven methodologies to independently analyze and resolve complex technical challenges."
       ]
     },
     {
@@ -20,9 +21,8 @@
       "start": "June 2024",
       "end": "July 2024",
       "description": [
-        "Built responsive React.js front-ends, improving page load times by 25%.",
-        "Integrated and optimized RESTful APIs and database queries to support high‑traffic scenarios.",
-        "Instituted unit/integration testing, raising code coverage to 85%."
+        "Developed and maintained responsive applications, performed optimizations that improved page load",
+        "Performed impact analysis for API integration and optimized database queries maintain high performance"
       ]
     },
     {
@@ -34,7 +34,7 @@
       "end": "Jan 2024",
       "description": [
         "Led market analysis and feasibility studies, crafting a turnaround strategy projecting 20% revenue growth.",
-        "Developed interactive Power BI dashboards for KPI visualization, driving a 50K investment decision."
+        "Developed interactive Power BI dashboards for KPI visualization, driving investment decisions."
       ]
     }
   ]
