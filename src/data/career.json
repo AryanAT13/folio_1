@@ -1,40 +1,14 @@
 {
   "career": [
     {
-      "name": "Wayspire (Microsoft & Tryst, IIT‑Delhi)",
-      "href": "https://wayspire.in/",
-      "title": "A.I. Intern (Remote)",
-      "logo": "/way.png",
-      "start": "Feb 2024 ",
-      "end": "Apr 2024",
+      "name": "VeLyra Labs (Stealth Startup)",
+      "href": "https://www.ve-lyra.com/",
+      "title": "Gen AI Intern",
+      "logo": "/velyra.png",
+      "start": "July 2026 ",
+      "end": "Present",
       "description": [
-        "Tested  scalable  NLP  modules  for  intent  classification",
-        "Achieved accuracy by systematically analyzing model performance and refining algorithms",
-        "Utilized data-driven methodologies to independently analyze and resolve complex technical challenges."
-      ]
-    },
-    {
-      "name": "Unified Mentor",
-      "href": "https://www.unifiedmentor.com/",
-      "title": "Web Dev Intern (Remote)",
-      "logo": "/uni.png",
-      "start": "June 2024",
-      "end": "July 2024",
-      "description": [
-        "Developed and maintained responsive applications, performed optimizations that improved page load",
-        "Performed impact analysis for API integration and optimized database queries maintain high performance"
-      ]
-    },
-    {
-      "name": "Finlatics",
-      "href": "https://www.finlatics.com/",
-      "title": "Business Analyst (Project)",
-      "logo": "/fin.jpg",
-      "start": "Dec 2023",
-      "end": "Jan 2024",
-      "description": [
-        "Led market analysis and feasibility studies, crafting a turnaround strategy projecting 20% revenue growth.",
-        "Developed interactive Power BI dashboards for KPI visualization, driving investment decisions."
+        "working..."
       ]
     }
   ]

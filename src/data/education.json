@@ -1,40 +1,22 @@
 {
   "education": [
+        {
+      "name": "Vellore Institute of Technology, Chennai",
+      "href": "https://chennai.vit.ac.in/",
+      "title": "BTech in Computer Science with Specialization in AI & Ml.",
+      "logo": "/Vit.png",
+      "start": "Jul 2023",
+      "end": "Present"
+    },
+    
     {
       "name": "Indian Institute of Technology, Madras",
       "href": "https://www.iitm.ac.in/",
       "title": "BS in Data Science.",
       "logo": "/iit.png",
       "start": "Jul 2023",
-      "end": "Present",
-      "description": [
-        "Working with data from messy spreadsheets to clean dashboards, analyzing, visualizing, and modeling with tools like pandas, seaborn, and scikitlearn.",
-        "Gaining hands on experience in uncovering trends, testing hypotheses, and making data driven decisions that go beyond the numbers."
-      ]
-    },
-    {
-      "name": "Vellore Institute of Technology, Chennai",
-      "href": "https://chennai.vit.ac.in/",
-      "title": "BTech in Computer Science Eng. with Specialization in AI & Ml.",
-      "logo": "/Vit.png",
-      "start": "Jul 2023",
-      "end": "Present",
-      "description": [
-        "Developing a strong foundation in software eng. with practical exposure to techniques used in data processing, model training, and real world problem solving.",
-        "Taking steps to connect AI with real world impact, whether it's through internships, open-source, or small personal prototypes."
-      ]
-    },
-    {
-      "name": "Delhi Public School Sushant Lok, Gurgaon",
-      "href": "https://dpssl.net/",
-      "title": "High School",
-      "logo": "/dps.png",
-      "start": "2013",
-      "end": "2021",
-      "description": [
-        "Awarded with Scholar Badges and Blue Blazer for consistent academic excellence.",
-        "Scored around 90% in 10th and 80% in 12th grade CBSE Board Examinations."
-      ]
+      "end": "Present"
     }
+
   ]
 }
