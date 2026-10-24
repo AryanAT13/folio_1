@@ -3,6 +3,15 @@ import { Bot, Loader2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import ChatMessage from "./ChatMessage";
 
+// useChat surfaces the response body as the error message; /api/chat sends { error: "..." }.
+function getErrorMessage(error: Error) {
+  try {
+    const parsed = JSON.parse(error.message);
+    if (typeof parsed?.error === "string") return parsed.error;
+  } catch {}
+  return "Ellie couldn't reply. Please try again.";
+}
+
 interface ChatMessagesProps {
   messages: Message[];
   error: Error | undefined;
@@ -58,7 +67,7 @@ export default function ChatMessages({
       {/* error */}
       {error && (
         <p className="text-center text-xs text-rose-500">
-          ......
+          {getErrorMessage(error)}
         </p>
       )}
     </div>

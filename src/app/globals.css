@@ -79,7 +79,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* The page sits on the fixed background video; this colour (the video's top edge, same as
+       themeColor in layout.tsx) only shows before the poster paints, during overscroll, and
+       where browsers sample the page to tint their toolbar, so it must blend with the video. */
+    background-color: #1a1f1e;
+    @apply text-foreground;
   }
   .title {
     @apply font-serif text-5xl tracking-wide decoration-border/75 decoration-2;
@@ -243,6 +247,29 @@
 
   .animate-fade-in-up {
     animation: fade-in-up 0.5s ease-out;
+  }
+
+  /* Navbar entrance. Done in CSS (not JS) so the nav is visible and usable on first paint
+     instead of staying hidden until the JS bundle has downloaded and hydrated. */
+  @keyframes nav-enter {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-nav-enter {
+    animation: nav-enter 0.8s ease-out both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-nav-enter {
+      animation: none;
+    }
   }
 }
 

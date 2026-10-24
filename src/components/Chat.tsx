@@ -21,47 +21,11 @@ export default function Chat() {
     error,
   } = useChat({
     api: "/api/chat",
-    // ✅ THE FIX: Manual Reader to handle Raw Text
-    onResponse: (response) => {
-      if (response.ok) {
-        const reader = response.body?.getReader();
-        const decoder = new TextDecoder();
-
-        // 1. Create a placeholder message for Ellie's response
-        setMessages((prev) => [
-          ...prev,
-          { id: Date.now().toString(), role: "assistant", content: "" },
-        ]);
-
-        const read = () => {
-          reader?.read().then(({ done, value }) => {
-            if (done) return;
-
-            // Decode the raw chunk
-            const chunk = decoder.decode(value, { stream: true });
-
-            // 2. Append the new text to the LAST message (Ellie's bubble)
-            setMessages((prev) => {
-              const lastMsg = prev[prev.length - 1];
-              // Ensure we are modifying the assistant's message
-              if (lastMsg && lastMsg.role === "assistant") {
-                return [
-                  ...prev.slice(0, -1), // Keep all previous messages
-                  { ...lastMsg, content: lastMsg.content + chunk }, // Update the last one
-                ];
-              }
-              return prev;
-            });
-
-            // Keep reading the next chunk
-            read();
-          }).catch((err) => console.error("Stream read error:", err));
-        };
-        
-        // Start the loop
-        read();
-      }
-    },
+    // /api/chat streams plain text, so let useChat read it as text. (Reading the body by hand
+    // in onResponse locked the stream, which made useChat flag every reply as an error.)
+    streamProtocol: "text",
+    // Keep the user's message on screen if the request fails so they can retry.
+    keepLastMessageOnError: true,
     onError: (e) => {
       console.error("Chat error:", e);
     },
@@ -74,12 +38,15 @@ export default function Chat() {
       <Accordion type="single" collapsible className="flex relative z-40">
         <AccordionItem
           value="item-1"
-          className="fixed bottom-8 right-8 w-80 rounded-md border bg-background"
+          // Full width minus a margin on small phones, 20rem otherwise; clear of the home indicator.
+          className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 w-[calc(100vw-2rem)] max-w-80 rounded-md border bg-background sm:bottom-8 sm:right-8"
         >
           <AccordionTrigger className="border-b px-6">
             <ChatHeader />
           </AccordionTrigger>
-          <AccordionContent className="flex max-h-96 min-h-80 flex-col justify-between p-0">
+          {/* Capped by the space left under the navbar (12rem = nav + chat header + margins), so it
+              still fits on landscape phones / with the keyboard open. */}
+          <AccordionContent className="flex max-h-[min(24rem,calc(100dvh-12rem))] min-h-[min(20rem,calc(100dvh-12rem))] flex-col justify-between p-0">
             <ChatMessages
               messages={messages}
               error={error}

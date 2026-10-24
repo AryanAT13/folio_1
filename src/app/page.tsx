@@ -8,7 +8,6 @@ import { ArrowDown, ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-reac
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
-import { cachedDataVersionTag } from "v8";
 
 const birthDate = new Date(2004, 10, 13); // Months 0 - jan.... and so on
 function getAccurateAge(date: Date) {
@@ -46,7 +45,7 @@ export default function Home() {
             hi Aryan here.
           </h1>
 
-          <p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
+          <p className="mt-2 text-sm font-medium sm:whitespace-nowrap sm:text-base">
             {getAccurateAge(birthDate)}
             {' '}yo software engineer from{' '}
             <a
@@ -90,12 +89,13 @@ export default function Home() {
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
-            <Link href="/Resume.pdf" target="_blank">
+            {/* Plain <a> for a file: next/link would prefetch the PDF on every visit. */}
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button variant="outline">
                 <span className="font-semibold">Resume</span>
                 <FileDown className="ml-2 size-5" />
               </Button>
-            </Link>
+            </a>
             <Socials />
           </section>
         </div>

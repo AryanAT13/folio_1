@@ -20,12 +20,14 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 }
 
 // This component is now simplified as the theme is always dark.
+// It is the only Toaster in the app: sonner renders every toast once per mounted Toaster.
 function ToastProvider() {
   return (
     <Toaster
       className="mt-12"
       position="top-right"
       theme="dark" // Hardcoded to "dark"
+      richColors
     />
   );
 }

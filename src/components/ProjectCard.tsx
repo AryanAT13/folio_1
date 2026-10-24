@@ -23,7 +23,9 @@ export function ProjectCard({ project }: Props) {
     <Card className="flex flex-col">
       <CardHeader>
         {image && (
-          <Link href={href || image}>
+          // Plain <a>, not next/link: this usually points at the full-size image file, and
+          // next/link would prefetch that multi-MB file whenever the card scrolls into view.
+          <a href={href || image}>
             <Image
               src={image}
               alt={name}
@@ -31,7 +33,7 @@ export function ProjectCard({ project }: Props) {
               height={300}
               className="h-40 w-full object-cover object-top"
             />
-          </Link>
+          </a>
         )}
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
