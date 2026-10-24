@@ -5,12 +5,9 @@ import GitHubProvider, { type GithubProfile } from "next-auth/providers/github";
 export const authOptions: AuthOptions = {
   providers: [
     GitHubProvider({
-      // Trimmed: a stray newline pasted into the hosting dashboard makes GitHub reject the
-      // credentials, which surfaces only as a generic OAuthCallback error.
       clientId: process.env.GITHUB_CLIENT_ID?.trim() ?? "",
       clientSecret: process.env.GITHUB_CLIENT_SECRET?.trim() ?? "",
-      // openid-client's default 3.5s timeout for the code->token exchange is easy to exceed on a
-      // serverless cold start, and a timeout there also ends in an OAuthCallback error.
+      issuer: "https://github.com",
       httpOptions: { timeout: 10000 },
     }),
   ],
