@@ -1,30 +1,45 @@
 import { db } from "@/lib/db";
 import { getServerSession, type AuthOptions } from "next-auth";
-import GitHubProvider from "next-auth/providers/github";
+import GitHubProvider, { type GithubProfile } from "next-auth/providers/github";
 
 export const authOptions: AuthOptions = {
   providers: [
     GitHubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID!,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+      // Trimmed: a stray newline pasted into the hosting dashboard makes GitHub reject the
+      // credentials, which surfaces only as a generic OAuthCallback error.
+      clientId: process.env.GITHUB_CLIENT_ID?.trim() ?? "",
+      clientSecret: process.env.GITHUB_CLIENT_SECRET?.trim() ?? "",
+      // openid-client's default 3.5s timeout for the code->token exchange is easy to exceed on a
+      // serverless cold start, and a timeout there also ends in an OAuthCallback error.
+      httpOptions: { timeout: 10000 },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET?.trim(),
   session: {
     strategy: "jwt",
   },
+  // Send auth errors back to the guestbook (which explains them) instead of NextAuth's
+  // generic "Try signing in with a different account" page.
+  pages: {
+    signIn: "/guestbook",
+    error: "/guestbook",
+  },
   callbacks: {
     async signIn({ user, profile }) {
-      if (!user.email || !profile) {
+      const githubProfile = profile as GithubProfile | undefined;
+      if (!user.email || !githubProfile) {
+        console.error("[auth] GitHub sign-in rejected: no email or profile returned.");
         return false;
       }
       try {
+        // Match on the GitHub account id first so a changed email doesn't hit the
+        // UNIQUE(github_id) constraint; fall back to email for rows created before.
         const userInDbResult = await db.execute({
-          sql: "SELECT id FROM user WHERE email = ?",
-          args: [user.email],
+          sql: "SELECT id FROM user WHERE github_id = ? OR email = ? ORDER BY github_id = ? DESC LIMIT 1",
+          args: [githubProfile.id, user.email, githubProfile.id],
         });
 
         if (userInDbResult.rows.length === 0) {
-          const githubProfile = profile as any;
           const newUserId = "user_" + crypto.randomUUID();
           await db.execute({
             sql: "INSERT INTO user (id, github_id, username, name, email) VALUES (?, ?, ?, ?, ?)",
@@ -42,7 +57,7 @@ export const authOptions: AuthOptions = {
         }
         return true;
       } catch (error) {
-        console.error("Error in signIn callback:", error);
+        console.error("[auth] Database error in signIn callback:", error);
         return false;
       }
     },

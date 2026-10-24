@@ -50,13 +50,18 @@ export default function SignDialog({ user }: { user: User }) {
 
     startTransition(async () => {
       try {
-        await sign(formData);
-        router.refresh(); 
+        const result = await sign(formData);
+        if (!result.ok) {
+          toast.error(result.error);
+          return;
+        }
+        router.refresh();
         toast.success("Thank you for signing!");
         setMessage(""); // Clear the message field on success
         setIsOpen(false);
-      } catch (err: any) {
-        toast.error(err.message);
+      } catch {
+        // Network failure or the server action itself crashed.
+        toast.error("Couldn't reach the server. Please try again.");
       }
     });
   };
@@ -66,7 +71,7 @@ export default function SignDialog({ user }: { user: User }) {
       <DialogTrigger asChild>
         <Button>Sign Guestbook</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-h-[90dvh] w-[calc(100%-2rem)] overflow-y-auto rounded-lg sm:max-w-[425px]">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
             <DialogTitle>Sign my guestbook</DialogTitle>
