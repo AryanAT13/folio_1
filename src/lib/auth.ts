@@ -7,7 +7,7 @@ export const authOptions: AuthOptions = {
     GitHubProvider({
       clientId: process.env.GITHUB_CLIENT_ID?.trim() ?? "",
       clientSecret: process.env.GITHUB_CLIENT_SECRET?.trim() ?? "",
-      issuer: "https://github.com",
+      issuer: "https://github.com/login/oauth",
       httpOptions: { timeout: 10000 },
     }),
   ],
