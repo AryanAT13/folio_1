@@ -5,10 +5,12 @@
       "href": "https://www.ve-lyra.com/",
       "title": "Gen AI Intern",
       "logo": "/velyra.png",
-      "start": "July 2026 ",
-      "end": "Present",
+      "start": "June 2026 ",
+      "end": "October 2026",
       "description": [
-        "working..."
+        "Engineered an autonomous multilingual AI agent capable of executing real-time transactional state mutations and role based escalations by integrating LLM workflows with a TypeScript monolith.",
+        "Architected a synchronization layer utilizing Redis pub/sub and WebSockets, resolving critical session eviction vulnerabilities to enable sub-100ms multi user concurrency",
+        "Managed secure production deployments via Azure DevOps, configuring KVS via RBAC and enforcing multi-tenant RLS across PostgreSQL databases."
       ]
     }
   ]

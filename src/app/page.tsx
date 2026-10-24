@@ -63,7 +63,7 @@ export default function Home() {
               AI by Core. Dev in flow.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              I build reliable systems and software infrastructure, from backend APIs to developer workflows, always with a focus on performance & impact along with <strong>Opensource.</strong>
+              Developer shipping applied AI and distributed systems. I build the backend infrastructure that powers autonomous agent workflows, quantitative data pipelines, and Web3 protocols, focusing on fast execution and clean, scalable code.
             </p>
           </div>
 
