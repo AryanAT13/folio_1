@@ -30,18 +30,19 @@
       ]
     },
      {
-      "name": "LawLens",
-      "description": "Designed to simplify complex legal matters for everyday users. Whether it's a confusing clause in a contract or a general legal concern, LawLens delivers actionable insights, contextual Reddit wisdom, and intelligent document analysis.",
+      "name": "Recon",
+      "description": "Autonomous multi-agent quantitative research engine orchestrated in LangGraph that pairs a bounded adversarial crew with a calibrated ML pipeline for binary prediction markets. A Harvester caches market feeds, historical price data, and local FinBERT sentiment in DuckDB; a Quant agent runs feature and model experiments across LightGBM, PyTorch, and GARCH; a stateless Risk Manager audits calibration, Brier score, and liquidity constraints over a capped three-round debate; and a Pydantic-enforced parser structures contract specs. Every trial logs to an append-only ledger gated by walk-forward splits, Deflated Sharpe Ratio penalties, and a sealed blind holdout, streamed live in a Streamlit command center.",
       "image": "/pf.png",
       "tags": [
-        "Nodejs",
         "Python",
-        "NLP",
-        "PyMuPDF",
-        "FastAPI",
-        "RAG",
-        "SDK"
-      ],
+        "LangGraph",
+        "Pydantic",
+        "DuckDB",
+        "LightGBM",
+        "PyTorch",
+        "FinBERT",
+        "Streamlit"
+  ],
       "links": [
         {
           "name": "Website",
