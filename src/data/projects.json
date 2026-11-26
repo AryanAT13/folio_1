@@ -31,7 +31,7 @@
     },
      {
       "name": "Recon",
-      "description": "Autonomous multi-agent quantitative research engine orchestrated in LangGraph that pairs a bounded adversarial crew with a calibrated ML pipeline for binary prediction markets. A Harvester caches market feeds, historical price data, and local FinBERT sentiment in DuckDB; a Quant agent runs feature and model experiments across LightGBM, PyTorch, and GARCH; a stateless Risk Manager audits calibration, Brier score, and liquidity constraints over a capped three-round debate; and a Pydantic-enforced parser structures contract specs. Every trial logs to an append-only ledger gated by walk-forward splits, Deflated Sharpe Ratio penalties, and a sealed blind holdout, streamed live in a Streamlit command center.",
+      "description": "Autonomous multi-agent quantitative research engine orchestrated in LangGraph that pairs a bounded adversarial crew with a calibrated ML pipeline for binary prediction markets. Harvester caches market feeds, historical price data, and local FinBERT sentiment, a Quant agent runs feature and model experiments across LightGBM, PyTorch, and GARCH along with a stateless Risk Manager auditing calibration, Brier score, and liquidity constraints over a capped round debate and a parser structures contract specs. Every trial logs to an append only ledger gated by walk-forward splits, Deflated Sharpe Ratio penalties, and a sealed blind holdout.",
       "image": "/pf.png",
       "tags": [
         "Python",
