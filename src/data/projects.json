@@ -3,7 +3,7 @@
     {
       "name": "StakePort",
       "description": "Decentralized exchange for fractionalized physical assets. Each asset is an ERC-20 with its own constant product AMM, creator vesting lock and a hostile buyout mechanism that keeps on-chain prices tied to real-world value. AI engine adds an investment prospectus, an Isolation Forest fair-value oracle over retail listings, and a gradient-boosted risk classifier matched to each user's declared risk appetite. The terminal includes SIWE wallet sign-in, portfolio P&L tracking and a WebGL landing page.",
-      "image": "/project1.png",
+      "image": "/rich.png",
       "tags": [
         "Next.js",
         "TypeScript",
@@ -32,7 +32,7 @@
      {
       "name": "Recon",
       "description": "Autonomous multi-agent quantitative research engine orchestrated in LangGraph that pairs a bounded adversarial crew with a calibrated ML pipeline for binary prediction markets. Harvester caches market feeds, historical price data, and local FinBERT sentiment, a Quant agent runs feature and model experiments across LightGBM and GARCH along with a stateless Risk Manager auditing calibration, Brier score, and liquidity constraints over a capped round debate and a parser structures contract specs. Every trial logs to an append only ledger gated by walk-forward splits, Deflated Sharpe Ratio penalties, and a sealed blind holdout.",
-      "image": "/pf.png",
+      "image": "/grr.jpg",
       "tags": [
         "Python",
         "LangGraph",
@@ -59,7 +59,7 @@
     {
       "name": "EcoLoop",
       "description": "Self commissioning supervisory controller for building HVAC that closes the loop against a live EnergyPlus simulation through its runtime API. It discovers what can be actuated, trials each candidate measure against an untouched baseline, deploys only what earns its place (or nothing), and clamps every setpoint into a fixed comfort band. A local open-source LLM served by Ollama supervises from day-ahead forecasts, outside the inner control loop, and 13 capabilities are exposed over MCP. On a DOE medium office in Chicago, a full-year simulation shows 5.33% lower electricity and 8.66% lower peak demand, with unmet hours below baseline.",
-      "image": "/ecoloop.png",
+      "image": "/loop.png",
       "tags": [
         "Python",
         "EnergyPlus",
@@ -86,8 +86,8 @@
 
     {
       "name": "MediVault",
-      "description": "A Web3 patient sovereign medical ledger that secures your biological history on an immutable blockchain, granting you absolute ownership of your health data.It eliminates the fragmentation of traditional healthcare systems by unifying medical records into a single, decentralized vault.",
-      "image": "/Project2.png",
+      "description": "A Web3 patient sovereign medical ledger that secures your biological history on an immutable blockchain, granting you absolute ownership of your health data. Report files go through a Node.js middleware to IPFS, and only the CID, timestamp and category are written to a Solidity contract that enforces per-hospital access. Patients approve hospital requests and can revoke access on-chain at any time, with active permissions rebuilt from contract events.It eliminates the fragmentation of traditional healthcare systems by unifying medical records into a single, decentralized vault.",
+      "image": "/souk.png",
       "tags": [
         "Ethereum (Sepolia)",
         "IPFS",
@@ -116,7 +116,7 @@
     {
       "name": "NeuroSnap",
       "description": "Vision guided learned trajectory generation for autonomous quadrotor gate navigation in simulation, replacing run-time minimum-snap optimization (Mellinger & Kumar, 2011). A CNN gate detector with PnP pose estimation feeds a Kalman-filter gate map, and a Transformer predicts 7th-order polynomial trajectories in a single forward pass, trained against a minimum snap teacher with three rounds of DAgger. A cascaded PID with a learned drag model flies the plan, and an analytic verifier rejects bad re-plans. Reaches 97.5% mission success across 40 unseen simulated courses.",
-      "image": "/neurosnap.png",
+      "image": "/kamo.png",
       "tags": [
         "Python",
         "PyTorch",
@@ -138,7 +138,7 @@
     {
       "name": "AI-SLM Signal Pod",
       "description": "Production style signal pod for NIFTY 50 options. A TinyLlama-1.1B model fine-tuned with LoRA (TRL, on a Kaggle T4) emits structured CE/PE/NEUTRAL signals, but a deterministic orchestrator always has the final say: ADX suppression, Pydantic schema validation and low-conviction downgrades, each logged with a reason code. Training data was audited and rewritten with a rule-based confluence score (ADX, VIX, PCR) in a chain-of-thought block. Evaluated with a walk-forward harness over 5-day windows tracked in MLflow, including a RAG ablation where retrieved context overwhelmed the 1.1B model and the orchestrator caught every failure.",
-      "image": "/signal-pod.png",
+      "image": "/5.jpg",
       "tags": [
         "Python",
         "PyTorch",
@@ -160,7 +160,7 @@
     {
       "name": "Auto Drive Simulator",
       "description": "Reinforcement learning agents that learn to drive a custom three-lane Gymnasium environment with traffic and signalized intersections. Implements Q-Learning, SARSA, Expected SARSA, Monte Carlo control, Dyna-Q, Dyna-Q+ and a NumPy actor-critic, compared against random and hand-written baselines across multiple seeds. A FastAPI and WebSocket dashboard trains agents live, animates the policy, shows the learned action table and lets you drive manually for comparison. Covered by 123 tests.",
-      "image": "/rl-driving.png",
+      "image": "/auto.png",
       "tags": [
         "Python",
         "Gymnasium",
@@ -182,7 +182,7 @@
     {
       "name": "Smart Dining",
       "description": "AI first group ordering platform for restaurants. Diners scan a table QR code and order, an assistant backed by eight cooperating agents (greeter, recommendation, upsell, context memory, group coordinator, sentiment, multilingual NLU, order validation) coordinated by a typed DAG orchestrator. Recommendations are RAG-grounded through pgvector menu search and limited to real menu items, with multilingual support. Table-mates share a live cart over Socket.io with Redis, replies stream over SSE, and checkout is OTP verified. Includes per-agent golden case evals and a per-session LLM budget cap.",
-      "image": "/smart-dining.png",
+      "image": "/dine.jpg",
       "tags": [
         "TypeScript",
         "Next.js",
@@ -207,7 +207,7 @@
     {
       "name": "Sentient",
       "description": "An autonomous AI 'Chief of Staff' that actively manages your digital life. Sentient connects your Inbox and Calendar with a long-term memory engine to autonomously schedule meetings, resolve conflicts, and draft emails based on your historical preferences. \n\n Login restricted to test accounts only.",
-      "image": "/senti.png",
+      "image": "/ai.png",
       "tags": [
         "Agentic AI",
         "Next.js",
@@ -232,8 +232,8 @@
     },
     {
       "name": "Maintenance Tracker",
-      "description": "Full stack maintenance complaint system for an apartment society. Residents raise complaints with photos and follow progress; administrators triage them through a status lifecycle backed by an append-only audit trail, with priority-based resolution deadlines, derived overdue detection, notices and a dashboard. Photos upload directly to Cloudinary with EXIF stripped, and emails are queued in Postgres and sent through Brevo with retries and a delivery log. The Fastify API generates its OpenAPI docs from the same Zod schemas that validate requests, and is covered by Vitest suites.",
-      "image": "/society-tracker.png",
+      "description": "Maintenance complaint system for a society. Residents raise complaints with photos and follow progress; administrators triage them through a status lifecycle backed by an append-only audit trail, with priority-based resolution deadlines, derived overdue detection, notices and a dashboard. Photos upload directly to Cloudinary with EXIF stripped, and emails are queued in Postgres and sent through Brevo with retries and a delivery log. The Fastify API generates its OpenAPI docs from the same Zod schemas that validate requests, and is covered by Vitest suites.",
+      "image": "/main.jpg",
       "tags": [
         "Next.js",
         "React",
@@ -262,7 +262,7 @@
     {
       "name": "Fuzzy Caching API",
       "description": "Semantic search service over the 20 Newsgroups corpus. Posts are cleaned of email headers, footers and quotes, embedded with all-MiniLM-L6-v2 and stored in ChromaDB. PCA (50 dimensions) and a 15-component Gaussian Mixture Model provide soft cluster assignments instead of hard labels. A custom semantic cache partitioned by dominant cluster serves near-duplicate queries at a 0.85 cosine threshold, so each lookup scans one partition rather than the whole cache. FastAPI endpoints for querying, cache stats and cache flush; containerized with Docker.",
-      "image": "/semantic-cache.png",
+      "image": "/news.png",
       "tags": [
         "Python",
         "FastAPI",
@@ -284,7 +284,7 @@
     {
       "name": "Prompt Tune",
       "description": "Intelligent web tool designed to bridge the gap between human ideas and AI understanding. It leverages a powerful AI engine to transform simple or vague user prompts into well-structured, effective queries for better results from any LLM. ",
-      "image": "/si.png",
+      "image": "/bridge.png",
       "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Cohere AI", "Framer Motion"],
       "links": [
         {
@@ -302,7 +302,7 @@
     {
       "name": "Finance RAG Chatbot",
       "description": "Retrieval augmented finance Q&A chatbot served through FastAPI. Builds a 550-pair dataset, embeds the questions with all-MiniLM-L6-v2, retrieves the top 3 matches from a FAISS index and generates answers with google/flan-t5-base on CPU. Multi-turn /chat endpoint keyed by conversation ID, an evaluation script comparing RAG against the base model with BLEU, ROUGE-L and BERTScore, and a CPU-only Docker image.",
-      "image": "/finance-rag.png",
+      "image": "/iii.png",
       "tags": [
         "Python",
         "FastAPI",
@@ -323,7 +323,7 @@
     {
       "name": "Portfolio",
       "description": "My personal corner of the internet, built from scratch to showcase my work. Featuring a custom interactive guestbook with GitHub sign-in, a drawable signature pad, and an AI chatbot ready to answer questions. It is a full-stack application deployed globally on the edge.",
-      "image": "/port.jpg",
+      "image": "/mannn.png",
       "tags": ["Nextjs", "TypeScript", "Turso(SQLite)", "NextAuthjs", "EmailJS", "Cohere"],
       "links": [
         {
